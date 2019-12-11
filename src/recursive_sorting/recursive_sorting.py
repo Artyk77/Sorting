@@ -1,11 +1,14 @@
-# TO-DO: complete the helpe function below to merge 2 sorted arrays
+# TO-DO: complete the helper function below to merge 2 sorted arrays
 def merge( arrA, arrB ):
+
+    #reducing time complexity
     print(arrA, arrB)
     merged_arr = []
     
     # TO-DO
     l = 0
     r = 0
+    ##nested merge
     while l < len(arrA) and r < len(arrB):
         if arrA[l] < arrB[r]:
             merged_arr.append(arrA[l])
@@ -28,7 +31,7 @@ def merge( arrA, arrB ):
 def merge_sort( arr ):
     # TO-DO
     arr_length = len(arr)
-    if arr_length <= 1:
+    if arr_length <= 1:  #base case
         return arr
 
     midpoint = arr_length//2
@@ -51,7 +54,8 @@ def merge_sort_in_place(arr, l, r):
 
 # STRETCH: implement the Timsort function below
 # hint: check out https://github.com/python/cpython/blob/master/Objects/listsort.txt
-def timsort(arr):
+def timsort( arr ):
 
     return arr
+    
 print(merge_sort([1, 5, 8, 4, 2, 6, 9, 6, 0, 3, 7]))
